@@ -1,0 +1,11 @@
+{
+  "id": "RaiseHand",
+  "name": "Raise Hand",
+  "author": "Indi",
+  "description": "Raises the hand up and removes all rotation from cards in hand",
+  "version": "v1.0.0-beta",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": false
+}

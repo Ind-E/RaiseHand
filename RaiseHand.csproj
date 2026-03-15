@@ -58,7 +58,7 @@
             <Publicize>False</Publicize> <!--Allows private/protected field references but may cause errors.-->
         </Reference>
 
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="0.0.5" PrivateAssets="All" />
+        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="0.1.3" PrivateAssets="All" />
         <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="*" />
         <AdditionalFiles Include="RaiseHand/localization/**/*.json"/>
     </ItemGroup>
@@ -76,7 +76,7 @@
 
     <ItemGroup>
         <None Include=".gitignore" />
-        <None Include="mod_manifest.json" />
+        <None Include="RaiseHand.json" />
         <None Include="project.godot"/>
         <None Include="RaiseHand/**" />
     </ItemGroup>
@@ -91,6 +91,9 @@
     <Target Name="CopyToModsFolderOnBuild" AfterTargets="PostBuildEvent">
         <Message Text="Copying .dll to mods folder." Importance="high" />
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(Sts2Path)/mods/$(MSBuildProjectName)/" />
+
+        <Message Text="Copying manifest to mods folder." Importance="high" />
+        <Copy SourceFiles="RaiseHand.json" DestinationFolder="$(Sts2Path)/mods/$(MSBuildProjectName)/" />
 
         <Message Text="Copying .pdb to mods folder." Importance="high" />
         <Copy SourceFiles="$(TargetDir)$(TargetName).pdb"
