@@ -1,0 +1,7 @@
+{
+  "pck_name": "RaiseHand",
+  "name": "Raise Hand",
+  "author": "Indi",
+  "description": "Raises the hand up and removes all rotation from cards in hand",
+  "version": "v1.0.0"
+}
